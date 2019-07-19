@@ -11,3 +11,5 @@ mysql_password: 1234
 #           6564393065333631360a653634313733656233666431373937666362303039323466303265303665
 #           6635
 mysql_root_password: root
+domain: mondomaine.fr
+ansitrano_deploy_to: /home/{{ user }}/mondomaine.fr
