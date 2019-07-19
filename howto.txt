@@ -1,0 +1,43 @@
+Ubuntu >= 18.04
+Installer Ansible:
+    Python est requis:
+        sudo apt-get install python -y
+    Ansible:
+        sudo apt update
+        sudo apt install software-properties-common
+        sudo apt-add-repository --yes --update ppa:ansible/ansible
+        sudo apt update
+
+Creer une clé ssh:
+    Generate:
+        ssh-keygen
+    ! creer la clé ssh dans le fichier par défaut 'id_rsa.pub' sinon il faut changer dans le vagrantfile et dans le playbook.yml
+
+Mise en place de la VM
+    Installer virtualbox:
+        sudo apt-get install virtualbox
+    Installer vagrant:
+        sudo apt-get install vagrant
+    Ping VM:
+        ping 192.168.33.12
+
+Déployer avec Ansible:
+    commande:
+        ansible-playbook -i hosts playbook.yml --ask-vault-pass
+    ! pass par défaut 'root' à changer 'mysql_root_password' dans vars.yml
+
+Connection VM:
+    commande:
+        ssh root@192.168.33.12
+        ou
+        ssh mondomaine@192.168.33.12
+    actions:
+        Vous pouvez utiliser les outils (git, vim, python, php)
+
+Outils déployer (in progress):
+    mysql (mysql/tasks)
+    php-fpm (php/tasks)
+    composer (php/tasks)
+    git (tools/tasks)
+    vim (tools/tasks)
+    fish (tools/tasks)
