@@ -41,3 +41,5 @@ Outils déployer (in progress):
     git (tools/tasks)
     vim (tools/tasks)
     fish (tools/tasks)
+    Nginx (nginx/tasks)
+    Firewall afw (firewall/tasks)
