@@ -21,10 +21,18 @@ Mise en place de la VM
     Ping VM:
         ping 192.168.33.12
 
-Déployer avec Ansible:
+Installer avec Ansible:
     commande:
         ansible-playbook -i hosts playbook.yml --ask-vault-pass
     ! pass par défaut 'root' à changer 'mysql_root_password' dans vars.yml
+
+Deployer app
+    installer anistrano:
+        ansible-galaxy install ansistrano.deploy ansistrano.rollback
+        or/
+        ansible-galaxy install cbrunnkvist.ansistrano-symfony-deploy
+    ....
+    ....
 
 Connection VM:
     commande:
