@@ -1,0 +1,22 @@
+---
+php_version: 7.2
+mysql_db: mondomaine
+mysql_user: mondomaine
+mysql_password: 1234
+# mysql_root_password: !vault |
+#           $ANSIBLE_VAULT;1.1;AES256
+#           62303061366366353065373937343733653565623861366134666264653064633465633639656161
+#           3738383761383930613634313035316331356162383630620a303462663338663930323434613832
+#           30663066626132313836306265626562373264343464306639316135633063363132383739396133
+#           6564393065333631360a653634313733656233666431373937666362303039323466303265303665
+#           6635
+mysql_root_password: root
+domain: mondomaine.fr
+ansitrano_deploy_to: /home/{{ user }}/{{ domain}}
+ansitrano_deploy_via: git
+#ansitrano_git_repo: "{{ ansitrano_deploy_to }}.git" #Local git
+anistrano_git_repo: "git@github.com:makameister/Framework.git" #Github
+ansistrano_git_branch: master
+ansitrano_keep_releases: 5
+ansitrano_shared_paths: ["public/uploads", "storage"]
+#ansitrano_shared_files: [".env"]

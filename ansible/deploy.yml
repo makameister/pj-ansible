@@ -1,0 +1,10 @@
+---
+- name: Installation anistrano
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - include_vars:
+      file: vars.yml
+  - include_role:
+      name: ansistrano.deploy

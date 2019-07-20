@@ -1,0 +1,9 @@
+---
+- name: Deploy Symfony
+  hosts: all
+  remote_user: root
+  tasks:
+  - include_vars:
+      file: sf-vars.yml
+  - include_role:
+      name: cbrunnkvist.ansistrano-symfony-deploy
