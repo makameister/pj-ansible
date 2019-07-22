@@ -31,8 +31,10 @@ Deployer app
         ansible-galaxy install ansistrano.deploy ansistrano.rollback
         or/
         ansible-galaxy install cbrunnkvist.ansistrano-symfony-deploy
-    ....
-    ....
+    Déployer:
+        ansible-playbook -i hosts deploy.yml --ask-vault-pass
+        
+!!! A résoudre: pointer sur le nom de domaine
 
 Connection VM:
     commande:
@@ -48,6 +50,8 @@ Outils déployer (in progress):
     composer (php/tasks)
     git (tools/tasks)
     vim (tools/tasks)
+    Nginx (Nginx/tasks)
+    Ansistrano (deploy.yml & vars.yml)
     fish (tools/tasks)
     Nginx (nginx/tasks)
     Firewall afw (firewall/tasks)
